@@ -10,6 +10,7 @@ div#taskbar {
     width: 100vw;
     height: 100vh;
     z-index: 10;
+    opacity: 1;
     background: rgb(15, 15, 15);
     border-top: 1px transparent solid;
 }

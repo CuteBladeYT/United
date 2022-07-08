@@ -17,6 +17,17 @@ export function reload_taskbar() {
 
     taskbar.style.height = `${taskbar_height}px`;
 
+    if (settings.desktop.taskbar.auto_hide == true) {
+        taskbar.onmouseenter = () => {
+            taskbar.style.bottom = `0`;
+            taskbar.style.opacity = "1";
+        };
+        taskbar.onmouseleave = () => {
+            taskbar.style.bottom = `calc(${taskbar_height}px - 4px)`;
+            taskbar.style.opacity = "0";
+        };
+    };
+
     program_launcher.style.width = `${taskbar_height}px`;
     if (settings.experimental_mode)
         program_launcher.firstChild.src = "storage/system/icns/nightly.png";
