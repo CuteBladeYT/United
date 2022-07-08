@@ -8,6 +8,15 @@ export let structure = {
         program_launcher: {
             self: "div#taskbar > button#program_launcher",
             icon: "div#taskbar > button#program_launcher > img"
+        },
+        programs: {
+            self: "div#taskbar > div#programs"
+        },
+        tray: {
+            self: "div#taskbar > button#tray"
+        },
+        clock: {
+            self: "div#taskbar > button#clock"
         }
     }
 }

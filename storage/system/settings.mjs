@@ -8,6 +8,7 @@ export let settings = {
         },
         taskbar: {
             height: 64,
+            auto_hide: true,
             clock: {
                 show_seconds: true
             },

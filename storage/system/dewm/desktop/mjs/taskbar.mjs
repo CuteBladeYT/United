@@ -3,13 +3,28 @@ import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
 
 export function reload_taskbar() {
+    // get all elements
     let taskbar = document.querySelector(structure.taskbar.self);
     let program_launcher = document.querySelector(structure.taskbar.program_launcher.self);
+    let programs = document.querySelector(structure.taskbar.programs.self);
+    let tray = document.querySelector(structure.taskbar.tray.self);
+    let clock = document.querySelector(structure.taskbar.clock.self);
 
-    taskbar.style.height = `${settings.desktop.taskbar.height}px`;
+    // assign height to variable
+    let taskbar_height = settings.desktop.taskbar.height;
 
-    program_launcher.style.width = `${settings.desktop.taskbar.height}px`;
+
+
+    taskbar.style.height = `${taskbar_height}px`;
+
+    program_launcher.style.width = `${taskbar_height}px`;
     if (settings.experimental_mode)
         program_launcher.firstChild.src = "storage/system/icns/nightly.png";
     else program_launcher.firstChild.src = "storage/system/icns/icon.png";
+
+    programs.style = `left: ${taskbar_height}px; width: calc(100% - (${taskbar_height}px * 4) - (${taskbar_height}px * 4))`;
+
+    tray.style = `right: calc(${taskbar_height}px * 3); width: calc(${taskbar_height}px * 4)`;
+
+    clock.style = `right: 0; width: calc(${taskbar_height}px * 3); font-size: calc(${taskbar_height}px / 2)`;
 }

@@ -66,6 +66,7 @@ function createWindow() {
       socket.emit(channel, mainWindow.webContents.getFrameRate());
     });
 
+    // Handle taking screenshots
     socket.on("screenshot", (fpath) => {
       mainWindow.webContents.capturePage().then(img => {
         let date = new Date();
@@ -103,6 +104,7 @@ function createWindow() {
       })
     });
   });
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
@@ -120,6 +122,8 @@ const filenameForbiddenNames = [
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
+
+  app.setName("United");
 
   app.on("activate", function () {
     // On macOS it"s common to re-create a window in the app when the
