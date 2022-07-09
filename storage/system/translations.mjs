@@ -44,7 +44,7 @@ export const translations = {
                 bg: "",
                 ua: "Український",
                 fr: "Ukrainien",
-                ptbr: "Ucrânia",
+                ptbr: "Ucrâniano",
             },
             id: "ua"
         },
