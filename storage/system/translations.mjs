@@ -5,7 +5,7 @@ export const translations = {
                 og: "English",
                 en: "English",
                 pl: "Angielski",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             id: "en"
@@ -15,7 +15,7 @@ export const translations = {
                 og: "Polski",
                 en: "Polish",
                 pl: "Polski",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             id: "pl"
@@ -25,17 +25,17 @@ export const translations = {
                 og: "Български",
                 en: "Bulgarian",
                 pl: "Bułgarski",
-                bul: "Български",
+                bg: "Български",
                 ua: ""
             },
-            id: "bul"
+            id: "bg"
         },
         {
             name: {
                 og: "",
                 en: "Ukrainian",
                 pl: "Ukraiński",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             id: "ua"
@@ -47,13 +47,13 @@ export const translations = {
                 self: {
                     en: "Launcher",
                     pl: "Programy",
-                    bul: "Програми",
+                    bg: "Програми",
                     ua: ""
                 },
                 hover: {
                     en: "Launch programs",
                     pl: "Uruchom programy",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -63,43 +63,43 @@ export const translations = {
         battery: {
             en: "Battery",
             pl: "Bateria",
-            bul: "Батерия",
+            bg: "Батерия",
             ua: "",
             charging: {
                 en: "Charging",
                 pl: "Ładowanie",
-                bul: "Зареждане",
+                bg: "Зареждане",
                 ua: ""
             }
         },
         volume: {
             en: "Volume",
             pl: "Głośność",
-            bul: "Ниво на звука",
+            bg: "Ниво на звука",
             ua: "",
             muted: {
                 en: "Muted",
                 pl: "Wyciszone",
-                bul: "Заглушен",
+                bg: "Заглушен",
                 ua: ""
             }
         },
         connection: {
             en: "Internet",
             pl: "Internet",
-            bul: "Интернет",
+            bg: "Интернет",
             ua: "",
             state: {
                 true: {
                     en: "Connected",
                     pl: "Połączony",
-                    bul: "Свързан",
+                    bg: "Свързан",
                     ua: ""
                 },
                 false: {
                     en: "Disconnected",
                     pl: "Niepołączony",
-                    bul: "Изключен",
+                    bg: "Изключен",
                     ua: ""
                 }
             }
@@ -111,13 +111,13 @@ export const translations = {
                 normal: {
                     en: "January",
                     pl: "Styczeń",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Jan",
                     pl: "Sty",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -125,13 +125,13 @@ export const translations = {
                 normal: {
                     en: "February",
                     pl: "Luty",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Feb",
                     pl: "Lut",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -139,13 +139,13 @@ export const translations = {
                 normal: {
                     en: "March",
                     pl: "Marzec",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Mar",
                     pl: "Mar",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -153,13 +153,13 @@ export const translations = {
                 normal: {
                     en: "April",
                     pl: "Kwiecień",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Apr",
                     pl: "Kwi",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -167,13 +167,13 @@ export const translations = {
                 normal: {
                     en: "May",
                     pl: "Maj",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "May",
                     pl: "Maj",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -181,13 +181,13 @@ export const translations = {
                 normal: {
                     en: "June",
                     pl: "Czerwiec",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Jun",
                     pl: "Cze",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -195,13 +195,13 @@ export const translations = {
                 normal: {
                     en: "July",
                     pl: "Lipiec",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Jul",
                     pl: "Lip",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -209,13 +209,13 @@ export const translations = {
                 normal: {
                     en: "August",
                     pl: "Sierpień",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Aug",
                     pl: "Sie",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -223,13 +223,13 @@ export const translations = {
                 normal: {
                     en: "September",
                     pl: "Wrzesień",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Sep",
                     pl: "Wrz",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -237,13 +237,13 @@ export const translations = {
                 normal: {
                     en: "October",
                     pl: "Październik",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Oct",
                     pl: "Paź",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -251,13 +251,13 @@ export const translations = {
                 normal: {
                     en: "November",
                     pl: "Listopad",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Nov",
                     pl: "Lis",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             },
@@ -265,13 +265,13 @@ export const translations = {
                 normal: {
                     en: "December",
                     pl: "Grudzień",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 },
                 short: {
                     en: "Dec",
                     pl: "Gru",
-                    bul: "",
+                    bg: "",
                     ua: ""
                 }
             }
@@ -280,49 +280,49 @@ export const translations = {
             milisecond: {
                 en: "Milisecond",
                 pl: "Milisekunda",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             second: {
                 en: "Second",
                 pl: "Sekunda",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             minute: {
                 en: "Minute",
                 pl: "Minuta",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             hour: {
                 en: "Hour",
                 pl: "Godzina",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             day: {
                 en: "Day",
                 pl: "Dzień",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             week: {
                 en: "Week",
                 pl: "Tydzień",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             month: {
                 en: "Month",
                 pl: "Miesiąc",
-                bul: "",
+                bg: "",
                 ua: ""
             },
             year: {
                 en: "Year",
                 pl: "Rok",
-                bul: "",
+                bg: "",
                 ua: ""
             }
         }
