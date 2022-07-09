@@ -157,7 +157,7 @@ export const translations = {
             en: "Network",
             pl: "Sieć",
             bg: "",
-            ua: "",
+            ua: "Мережа",
             fr: "Réseau",
             ptbr: "",
             de: "Netzwerk",
