@@ -8,6 +8,13 @@ const http = require("http");
 const express = require("express");
 const socketio = require("socket.io");
 
+const sound_play = require("sound-play");
+
+// API modules
+const network_speed = require("network-speed");
+const loudness = require("loudness");
+const system_info = require("systeminformation");
+
 let settings_raw = fs.readFileSync("storage/system/settings.mjs", "utf-8");
 settings_raw = settings_raw.slice(21, settings_raw.length);
 let settings = "";
