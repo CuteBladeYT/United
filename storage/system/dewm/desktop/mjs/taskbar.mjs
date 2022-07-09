@@ -2,6 +2,8 @@ import * as time from "../../../time.mjs";
 import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
 
+let clock_interval;
+
 export function reload_taskbar() {
     // get all elements
     let taskbar = document.querySelector(structure.taskbar.self);
@@ -38,4 +40,15 @@ export function reload_taskbar() {
     tray.style = `right: calc(${taskbar_height}px * 3); width: calc(${taskbar_height}px * 4)`;
 
     clock.style = `right: 0; width: calc(${taskbar_height}px * 3); font-size: calc(${taskbar_height}px / 2)`;
+
+    if (clock_interval) clearInterval(clock_interval);
+    clock_interval = setInterval(() => {
+        let t = time.get_parsed();
+
+        clock.textContent = `${t.hour}:${t.minute}`;
+        if (settings.desktop.taskbar.clock.show_seconds == true)
+            clock.textContent += `:${t.second}`;
+    
+        clock.title = t.date;
+    }, 1000);
 }

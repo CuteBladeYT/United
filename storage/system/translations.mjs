@@ -82,5 +82,195 @@ export const translations = {
                 }
             }
         }
+    },
+    dates: {
+        months: [
+            {
+                normal: {
+                    en: "January",
+                    pl: "Styczeń",
+                    bul: ""
+                },
+                short: {
+                    en: "Jan",
+                    pl: "Sty",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "February",
+                    pl: "Luty",
+                    bul: ""
+                },
+                short: {
+                    en: "Feb",
+                    pl: "Lut",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "March",
+                    pl: "Marzec",
+                    bul: ""
+                },
+                short: {
+                    en: "Mar",
+                    pl: "Mar",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "April",
+                    pl: "Kwiecień",
+                    bul: ""
+                },
+                short: {
+                    en: "Apr",
+                    pl: "Kwi",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "May",
+                    pl: "Maj",
+                    bul: ""
+                },
+                short: {
+                    en: "May",
+                    pl: "Maj",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "June",
+                    pl: "Czerwiec",
+                    bul: ""
+                },
+                short: {
+                    en: "Jun",
+                    pl: "Cze",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "July",
+                    pl: "Lipiec",
+                    bul: ""
+                },
+                short: {
+                    en: "Jul",
+                    pl: "Lip",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "August",
+                    pl: "Sierpień",
+                    bul: ""
+                },
+                short: {
+                    en: "Aug",
+                    pl: "Sie",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "September",
+                    pl: "Wrzesień",
+                    bul: ""
+                },
+                short: {
+                    en: "Sep",
+                    pl: "Wrz",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "October",
+                    pl: "Październik",
+                    bul: ""
+                },
+                short: {
+                    en: "Oct",
+                    pl: "Paź",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "November",
+                    pl: "Listopad",
+                    bul: ""
+                },
+                short: {
+                    en: "Nov",
+                    pl: "Lis",
+                    bul: ""
+                }
+            },
+            {
+                normal: {
+                    en: "December",
+                    pl: "Grudzień",
+                    bul: ""
+                },
+                short: {
+                    en: "Dec",
+                    pl: "Gru",
+                    bul: ""
+                }
+            }
+        ],
+        time: {
+            milisecond: {
+                en: "Milisecond",
+                pl: "Milisekunda",
+                bul: ""
+            },
+            second: {
+                en: "Second",
+                pl: "Sekunda",
+                bul: ""
+            },
+            minute: {
+                en: "Minute",
+                pl: "Minuta",
+                bul: ""
+            },
+            hour: {
+                en: "Hour",
+                pl: "Godzina",
+                bul: ""
+            },
+            day: {
+                en: "Day",
+                pl: "Dzień",
+                bul: ""
+            },
+            week: {
+                en: "Week",
+                pl: "Tydzień",
+                bul: ""
+            },
+            month: {
+                en: "Month",
+                pl: "Miesiąc",
+                bul: ""
+            },
+            year: {
+                en: "Year",
+                pl: "Rok",
+                bul: ""
+            }
+        }
     }
 }

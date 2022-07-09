@@ -1,3 +1,5 @@
+
+
 export function get_parsed() {
     let date = new Date();
     let d = date.getDate();
@@ -8,6 +10,7 @@ export function get_parsed() {
     let m = date.getMinutes();
     let s = date.getSeconds();
     let ms = date.getMilliseconds();
+    let var_date = date.getVarDate;
 
     if (d.toString().length == 1) d = "0" + d;
     if (mo.toString().length == 1) mo = "0" + mo;
@@ -23,6 +26,7 @@ export function get_parsed() {
         hour: h,
         minute: m,
         second: s,
-        milisecond: ms
+        milisecond: ms,
+        date: var_date
     }
 }

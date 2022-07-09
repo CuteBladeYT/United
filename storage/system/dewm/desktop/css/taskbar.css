@@ -64,3 +64,9 @@ div#taskbar > button#clock {
     font-family: main;
     font-size: 100%;
 }
+
+div#taskbar > button#tray:hover,
+div#taskbar > button#clock:hover {background: rgba(255, 255, 255, 0.2)}
+
+div#taskbar > button#tray:active,
+div#taskbar > button#clock:active {background: rgba(255, 255, 255, 0.1)}
