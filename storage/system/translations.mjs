@@ -5,7 +5,8 @@ export const translations = {
                 og: "English",
                 en: "English",
                 pl: "Angielski",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             id: "en"
         },
@@ -14,7 +15,8 @@ export const translations = {
                 og: "Polski",
                 en: "Polish",
                 pl: "Polski",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             id: "pl"
         },
@@ -23,9 +25,20 @@ export const translations = {
                 og: "Български",
                 en: "Bulgarian",
                 pl: "Bułgarski",
-                bul: "Български"
+                bul: "Български",
+                ua: ""
             },
             id: "bul"
+        },
+        {
+            name: {
+                og: "",
+                en: "Ukrainian",
+                pl: "Ukraiński",
+                bul: "",
+                ua: ""
+            },
+            id: "ua"
         }
     ],
     structure: {
@@ -34,12 +47,14 @@ export const translations = {
                 self: {
                     en: "Launcher",
                     pl: "Programy",
-                    bul: "Програми"
+                    bul: "Програми",
+                    ua: ""
                 },
                 hover: {
                     en: "Launch programs",
                     pl: "Uruchom programy",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
         },
@@ -49,36 +64,43 @@ export const translations = {
             en: "Battery",
             pl: "Bateria",
             bul: "Батерия",
+            ua: "",
             charging: {
                 en: "Charging",
                 pl: "Ładowanie",
-                bul: "Зареждане"
+                bul: "Зареждане",
+                ua: ""
             }
         },
         volume: {
             en: "Volume",
             pl: "Głośność",
             bul: "Ниво на звука",
+            ua: "",
             muted: {
                 en: "Muted",
                 pl: "Wyciszone",
-                bul: "Заглушен"
+                bul: "Заглушен",
+                ua: ""
             }
         },
         connection: {
             en: "Internet",
             pl: "Internet",
             bul: "Интернет",
+            ua: "",
             state: {
                 true: {
                     en: "Connected",
                     pl: "Połączony",
-                    bul: "Свързан"
+                    bul: "Свързан",
+                    ua: ""
                 },
                 false: {
                     en: "Disconnected",
                     pl: "Niepołączony",
-                    bul: "Изключен"
+                    bul: "Изключен",
+                    ua: ""
                 }
             }
         }
@@ -89,144 +111,168 @@ export const translations = {
                 normal: {
                     en: "January",
                     pl: "Styczeń",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Jan",
                     pl: "Sty",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "February",
                     pl: "Luty",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Feb",
                     pl: "Lut",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "March",
                     pl: "Marzec",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Mar",
                     pl: "Mar",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "April",
                     pl: "Kwiecień",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Apr",
                     pl: "Kwi",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "May",
                     pl: "Maj",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "May",
                     pl: "Maj",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "June",
                     pl: "Czerwiec",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Jun",
                     pl: "Cze",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "July",
                     pl: "Lipiec",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Jul",
                     pl: "Lip",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "August",
                     pl: "Sierpień",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Aug",
                     pl: "Sie",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "September",
                     pl: "Wrzesień",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Sep",
                     pl: "Wrz",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "October",
                     pl: "Październik",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Oct",
                     pl: "Paź",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "November",
                     pl: "Listopad",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Nov",
                     pl: "Lis",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             },
             {
                 normal: {
                     en: "December",
                     pl: "Grudzień",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 },
                 short: {
                     en: "Dec",
                     pl: "Gru",
-                    bul: ""
+                    bul: "",
+                    ua: ""
                 }
             }
         ],
@@ -234,42 +280,50 @@ export const translations = {
             milisecond: {
                 en: "Milisecond",
                 pl: "Milisekunda",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             second: {
                 en: "Second",
                 pl: "Sekunda",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             minute: {
                 en: "Minute",
                 pl: "Minuta",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             hour: {
                 en: "Hour",
                 pl: "Godzina",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             day: {
                 en: "Day",
                 pl: "Dzień",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             week: {
                 en: "Week",
                 pl: "Tydzień",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             month: {
                 en: "Month",
                 pl: "Miesiąc",
-                bul: ""
+                bul: "",
+                ua: ""
             },
             year: {
                 en: "Year",
                 pl: "Rok",
-                bul: ""
+                bul: "",
+                ua: ""
             }
         }
     }
