@@ -6,7 +6,8 @@
   "scripts": {
     "start": "electron ."
   },
-  "author": "UnitedCatdom, Nightly",
+  "author": "UnitedCatdom, Nightly, Amethyst, Tiryo, GermanBread",
+  "repository": "https://github.com/CuteBladeYT/United",
   "license": "DSMS-v1.2",
   "devDependencies": {
     "electron": "^17.4.10"
