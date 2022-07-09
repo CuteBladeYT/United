@@ -35,7 +35,7 @@ export const translations = {
         },
         {
             name: {
-                og: "",
+                og: "Український",
                 en: "Ukrainian",
                 pl: "Ukraiński",
                 bg: "",
@@ -46,7 +46,7 @@ export const translations = {
         },
         {
             name: {
-                og: "",
+                og: "Français",
                 en: "French",
                 pl: "Francuski",
                 bg: "",
@@ -117,14 +117,14 @@ export const translations = {
                     pl: "Połączony",
                     bg: "Свързан",
                     ua: "З'єднано",
-                    fr: "Connecter"
+                    fr: "Connecté"
                 },
                 false: {
                     en: "Disconnected",
                     pl: "Niepołączony",
                     bg: "Изключен",
                     ua: "Від'єднано",
-                    fr: "Déconnecter"
+                    fr: "Déconnecté"
                 }
             }
         }
