@@ -23,7 +23,7 @@ export function reload_taskbar() {
             taskbar.style.opacity = "1";
         };
         taskbar.onmouseleave = () => {
-            taskbar.style.bottom = `calc(${taskbar_height}px - 4px)`;
+            taskbar.style.bottom = `calc(1px - ${taskbar_height}px)`;
             taskbar.style.opacity = "0";
         };
     };
