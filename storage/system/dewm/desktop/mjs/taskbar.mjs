@@ -10,6 +10,12 @@ export function reload_taskbar() {
     let program_launcher = document.querySelector(structure.taskbar.program_launcher.self);
     let programs = document.querySelector(structure.taskbar.programs.self);
     let tray = document.querySelector(structure.taskbar.tray.self);
+    let tray_imgs = {
+        notif: document.querySelector(structure.taskbar.tray.imgs.notif),
+        battery: document.querySelector(structure.taskbar.tray.imgs.battery),
+        volume: document.querySelector(structure.taskbar.tray.imgs.volume),
+        connection: document.querySelector(structure.taskbar.tray.imgs.connection)
+    };
     let clock = document.querySelector(structure.taskbar.clock.self);
 
     // assign height to variable
@@ -35,11 +41,19 @@ export function reload_taskbar() {
         program_launcher.firstChild.src = "storage/system/icns/nightly.png";
     else program_launcher.firstChild.src = "storage/system/icns/icon.png";
 
-    programs.style = `left: ${taskbar_height}px; width: calc(100% - (${taskbar_height}px * 4) - (${taskbar_height}px * 4))`;
+    programs.style = `left: ${taskbar_height}px;
+                        width: calc(100% - (${taskbar_height}px * 4) - (${taskbar_height}px * 4))
+    `;
 
-    tray.style = `right: calc(${taskbar_height}px * 3); width: calc(${taskbar_height}px * 4)`;
+    tray.style = `right: calc(${taskbar_height}px * 3);
+                    width: calc(${taskbar_height}px * 4)
+    `;
+    
 
-    clock.style = `right: 0; width: calc(${taskbar_height}px * 3); font-size: calc(${taskbar_height}px / 2)`;
+    clock.style = `right: 0;
+                    width: calc(${taskbar_height}px * 3);
+                    font-size: calc(${taskbar_height}px / 2)
+    `;
 
     if (clock_interval) clearInterval(clock_interval);
     clock_interval = setInterval(() => {

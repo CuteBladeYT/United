@@ -13,7 +13,13 @@ export let structure = {
             self: "div#taskbar > div#programs"
         },
         tray: {
-            self: "div#taskbar > button#tray"
+            self: "div#taskbar > button#tray",
+            imgs: {
+                notif: "div#taskbar > button#tray > img#notif",
+                battery: "div#taskbar > button#tray > img#battery",
+                volume: "div#taskbar > button#tray > img#volume",
+                connection: "div#taskbar > button#tray > img#connect"
+            }
         },
         clock: {
             self: "div#taskbar > button#clock"
