@@ -9,6 +9,7 @@ export const translations = {
                 ua: "Английський",
                 fr: "Anglais",
                 ptbr: "Português (Brasileiro)",
+                de: ""
             },
             id: "en"
         },
@@ -21,6 +22,7 @@ export const translations = {
                 ua: "Польский",
                 fr: "Polonais",
                 ptbr: "Polonês",
+                de: ""
             },
             id: "pl"
         },
@@ -33,6 +35,7 @@ export const translations = {
                 ua: "Болгарський",
                 fr: "Bulgare",
                 ptbr: "Bulgária",
+                de: ""
             },
             id: "bg"
         },
@@ -45,6 +48,7 @@ export const translations = {
                 ua: "Український",
                 fr: "Ukrainien",
                 ptbr: "Ucrâniano",
+                de: ""
             },
             id: "ua"
         },
@@ -57,20 +61,35 @@ export const translations = {
                 ua: "Французький",
                 fr: "Français",
                 ptbr: "Francês",
+                de: ""
             },
             id: "fr"
         },
         {
             name: {
-                og: "",
+                og: "Português (Brasileiro)",
                 en: "Portugese (Brazil)",
                 pl: "Portugalski (Brazylia)",
                 bg: "",
                 ua: "",
                 fr: "",
-                ptbr: "Português (Brasileiro)"
+                ptbr: "Português (Brasileiro)",
+                de: ""
             },
             id: "ptbr"
+        },
+        {
+            name: {
+                og: "",
+                en: "German",
+                pl: "Niemiecki",
+                bg: "",
+                ua: "",
+                fr: "",
+                ptbr: "",
+                de: ""
+            },
+            id: "de"
         }
     ],
     structure: {
