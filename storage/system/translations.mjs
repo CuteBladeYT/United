@@ -7,7 +7,7 @@ export const translations = {
                 pl: "Angielski",
                 bg: "",
                 ua: "Английський",
-                fr: ""
+                fr: "Anglais"
             },
             id: "en"
         },
@@ -18,7 +18,7 @@ export const translations = {
                 pl: "Polski",
                 bg: "",
                 ua: "Польский",
-                fr: ""
+                fr: "Polonais"
             },
             id: "pl"
         },
@@ -29,7 +29,7 @@ export const translations = {
                 pl: "Bułgarski",
                 bg: "Български",
                 ua: "Болгарський",
-                fr: ""
+                fr: "Bulgare"
             },
             id: "bg"
         },
@@ -40,7 +40,7 @@ export const translations = {
                 pl: "Ukraiński",
                 bg: "",
                 ua: "Український",
-                fr: ""
+                fr: "Ukrainien"
             },
             id: "ua"
         },
@@ -51,7 +51,7 @@ export const translations = {
                 pl: "Francuski",
                 bg: "",
                 ua: "Французький",
-                fr: ""
+                fr: "Français"
             },
             id: "fr"
         }
@@ -64,14 +64,14 @@ export const translations = {
                     pl: "Programy",
                     bg: "Програми",
                     ua: "Програми",
-                    fr: ""
+                    fr: "Programme"
                 },
                 hover: {
                     en: "Launch programs",
                     pl: "Uruchom programy",
                     bg: "",
                     ua: "Запустити програму",
-                    fr: ""
+                    fr: "Execution des programmes"
                 }
             },
         },
@@ -82,13 +82,13 @@ export const translations = {
             pl: "Bateria",
             bg: "Батерия",
             ua: "Батарея",
-            fr: "",
+            fr: "Batterie",
             charging: {
                 en: "Charging",
                 pl: "Ładowanie",
                 bg: "Зареждане",
                 ua: "Заряджання",
-                fr: ""
+                fr: "Mise en charge"
             }
         },
         volume: {
@@ -96,13 +96,13 @@ export const translations = {
             pl: "Głośność",
             bg: "Ниво на звука",
             ua: "Гучність",
-            fr: "",
+            fr: "Volume",
             muted: {
                 en: "Muted",
                 pl: "Wyciszone",
                 bg: "Заглушен",
                 ua: "Приглушено",
-                fr: ""
+                fr: "Muet"
             }
         },
         connection: {
@@ -110,21 +110,21 @@ export const translations = {
             pl: "Internet",
             bg: "Интернет",
             ua: "Інтернет",
-            fr: "",
+            fr: "Internet",
             state: {
                 true: {
                     en: "Connected",
                     pl: "Połączony",
                     bg: "Свързан",
                     ua: "З'єднано",
-                    fr: ""
+                    fr: "Connecter"
                 },
                 false: {
                     en: "Disconnected",
                     pl: "Niepołączony",
                     bg: "Изключен",
                     ua: "Від'єднано",
-                    fr: ""
+                    fr: "Déconnecter"
                 }
             }
         }
@@ -137,14 +137,14 @@ export const translations = {
                     pl: "Styczeń",
                     bg: "",
                     ua: "Січень",
-                    fr: ""
+                    fr: "Janvier"
                 },
                 short: {
                     en: "Jan",
                     pl: "Sty",
                     bg: "",
                     ua: "Січ",
-                    fr: ""
+                    fr: "Janv"
                 }
             },
             {
@@ -153,14 +153,14 @@ export const translations = {
                     pl: "Luty",
                     bg: "",
                     ua: "Лютий",
-                    fr: ""
+                    fr: "Février"
                 },
                 short: {
                     en: "Feb",
                     pl: "Lut",
                     bg: "",
                     ua: "Лют",
-                    fr: ""
+                    fr: "Févr"
                 }
             },
             {
@@ -169,14 +169,14 @@ export const translations = {
                     pl: "Marzec",
                     bg: "",
                     ua: "Березень",
-                    fr: ""
+                    fr: "Mars"
                 },
                 short: {
                     en: "Mar",
                     pl: "Mar",
                     bg: "",
                     ua: "Бер",
-                    fr: ""
+                    fr: "Mars"
                 }
             },
             {
@@ -185,14 +185,14 @@ export const translations = {
                     pl: "Kwiecień",
                     bg: "",
                     ua: "Квітень",
-                    fr: ""
+                    fr: "Avril"
                 },
                 short: {
                     en: "Apr",
                     pl: "Kwi",
                     bg: "",
                     ua: "Кві",
-                    fr: ""
+                    fr: "Avr"
                 }
             },
             {
@@ -201,14 +201,14 @@ export const translations = {
                     pl: "Maj",
                     bg: "",
                     ua: "Травень",
-                    fr: ""
+                    fr: "Mai"
                 },
                 short: {
                     en: "May",
                     pl: "Maj",
                     bg: "",
                     ua: "Трав",
-                    fr: ""
+                    fr: "Mai"
                 }
             },
             {
@@ -217,14 +217,14 @@ export const translations = {
                     pl: "Czerwiec",
                     bg: "",
                     ua: "Червень",
-                    fr: ""
+                    fr: "Juin"
                 },
                 short: {
                     en: "Jun",
                     pl: "Cze",
                     bg: "",
                     ua: "Чер",
-                    fr: ""
+                    fr: "Juin"
                 }
             },
             {
@@ -233,14 +233,14 @@ export const translations = {
                     pl: "Lipiec",
                     bg: "",
                     ua: "Липень",
-                    fr: ""
+                    fr: "Juillet"
                 },
                 short: {
                     en: "Jul",
                     pl: "Lip",
                     bg: "",
                     ua: "Лип",
-                    fr: ""
+                    fr: "Juill"
                 }
             },
             {
@@ -249,14 +249,14 @@ export const translations = {
                     pl: "Sierpień",
                     bg: "",
                     ua: "Серпень",
-                    fr: ""
+                    fr: "Août"
                 },
                 short: {
                     en: "Aug",
                     pl: "Sie",
                     bg: "",
                     ua: "Се",
-                    fr: ""
+                    fr: "Août"
                 }
             },
             {
@@ -265,14 +265,14 @@ export const translations = {
                     pl: "Wrzesień",
                     bg: "",
                     ua: "Вересень",
-                    fr: ""
+                    fr: "Septembre"
                 },
                 short: {
                     en: "Sep",
                     pl: "Wrz",
                     bg: "",
                     ua: "Вер",
-                    fr: ""
+                    fr: "Septembre"
                 }
             },
             {
@@ -281,14 +281,14 @@ export const translations = {
                     pl: "Październik",
                     bg: "",
                     ua: "Жовтень",
-                    fr: ""
+                    fr: "Octobre"
                 },
                 short: {
                     en: "Oct",
                     pl: "Paź",
                     bg: "",
                     ua: "Жовт",
-                    fr: ""
+                    fr: "Oct"
                 }
             },
             {
@@ -297,14 +297,14 @@ export const translations = {
                     pl: "Listopad",
                     bg: "",
                     ua: "Листопад",
-                    fr: ""
+                    fr: "Novembre"
                 },
                 short: {
                     en: "Nov",
                     pl: "Lis",
                     bg: "",
                     ua: "Лис",
-                    fr: ""
+                    fr: "Nov"
                 }
             },
             {
@@ -313,14 +313,14 @@ export const translations = {
                     pl: "Grudzień",
                     bg: "",
                     ua: "Грудень",
-                    fr: ""
+                    fr: "Décembre"
                 },
                 short: {
                     en: "Dec",
                     pl: "Gru",
                     bg: "",
                     ua: "Гру",
-                    fr: ""
+                    fr: "Déc"
                 }
             }
         ],
@@ -330,56 +330,56 @@ export const translations = {
                 pl: "Milisekunda",
                 bg: "",
                 ua: "Мілісекунда",
-                fr: ""
+                fr: "Milliseconde"
             },
             second: {
                 en: "Second",
                 pl: "Sekunda",
                 bg: "",
                 ua: "Секунда",
-                fr: ""
+                fr: "Seconde"
             },
             minute: {
                 en: "Minute",
                 pl: "Minuta",
                 bg: "",
                 ua: "Хвилина",
-                fr: ""
+                fr: "Minute"
             },
             hour: {
                 en: "Hour",
                 pl: "Godzina",
                 bg: "",
                 ua: "Година",
-                fr: ""
+                fr: "Heure"
             },
             day: {
                 en: "Day",
                 pl: "Dzień",
                 bg: "",
                 ua: "День",
-                fr: ""
+                fr: "Jour"
             },
             week: {
                 en: "Week",
                 pl: "Tydzień",
                 bg: "",
                 ua: "Тиждень",
-                fr: ""
+                fr: "Semaine"
             },
             month: {
                 en: "Month",
                 pl: "Miesiąc",
                 bg: "",
                 ua: "Місяць",
-                fr: ""
+                fr: "Mois"
             },
             year: {
                 en: "Year",
                 pl: "Rok",
                 bg: "",
                 ua: "Рік",
-                fr: ""
+                fr: "Année"
             }
         }
     }
