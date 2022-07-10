@@ -1,5 +1,5 @@
 {
-  "name": "United",
+  "name": "united",
   "version": "0.1.1",
   "description": "Pseudo Operating System written in JavaScript",
   "main": "main.js",
@@ -10,7 +10,7 @@
   "repository": "https://github.com/CuteBladeYT/United",
   "license": "DSMS-v1.2",
   "devDependencies": {
-    "electron": "^17.4.10"
+    "electron": "^19.0.8"
   },
   "dependencies": {
     "@polymer/polymer": "^3.5.1",
