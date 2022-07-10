@@ -116,7 +116,7 @@ export const translations = {
     ],
     structure: {
         taskbar: {
-            programLauncher: {
+            program_launcher: {
                 self: {
                     en: "Launcher",
                     pl: "Programy",
@@ -594,4 +594,8 @@ export const translations = {
             }
         }
     }
+}
+
+export function get_translation(language = String, translation = String) {
+    return eval(`translations.${translation}.${language}`);
 }

@@ -15,6 +15,9 @@ const network_speed = require("network-speed");
 const loudness = require("loudness");
 const system_info = require("systeminformation");
 
+const SOCKET_LOCALHOST_PORT = 3000;
+const SOCKET_LOCALHOST = `localhost:${SOCKET_LOCALHOST_PORT}`;
+
 let settings_raw = fs.readFileSync("storage/system/settings.mjs", "utf-8");
 settings_raw = settings_raw.slice(21, settings_raw.length);
 let settings = "";
@@ -64,7 +67,7 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadURL("http://localhost:3000/");
+  mainWindow.loadURL(`http://${SOCKET_LOCALHOST}/`);
   mainWindow.setMenuBarVisibility(false);
   mainWindow.setFullScreen(true);
 
@@ -73,8 +76,7 @@ function createWindow() {
       socket.emit(channel, mainWindow.webContents.getFrameRate());
     });
 
-    // Handle taking screenshots
-    socket.on("screenshot", (fpath) => {
+    socket.on("screenshot", () => {
       mainWindow.webContents.capturePage().then(img => {
         let date = new Date();
         let d = date.getDate();
@@ -108,7 +110,7 @@ function createWindow() {
         fs.writeFile(fpath, img.toPNG(), (err) => {
           if (err) throw err;
         });
-      })
+      });
     });
   });
 

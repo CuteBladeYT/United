@@ -1,8 +1,13 @@
 import * as time from "../../../time.mjs";
 import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
+import { translations, get_translation } from "../../../translations.mjs";
 
 let clock_interval;
+
+const TASKBAR_PROGRAMS_BUTTONS_ID = "TASKBAR_PROGRAMS_BUTTONS";
+
+let CURRENT_LANGUAGE = settings.language;
 
 export function reload_taskbar() {
     // get all elements
@@ -36,20 +41,37 @@ export function reload_taskbar() {
         };
     };
 
+    program_launcher.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.program_launcher.hover`);
     program_launcher.style.width = `${taskbar_height}px`;
     if (settings.experimental_mode)
         program_launcher.firstChild.src = "storage/system/icns/nightly.png";
     else program_launcher.firstChild.src = "storage/system/icns/icon.png";
 
-    programs.style = `left: ${taskbar_height}px;
-                        width: calc(100% - (${taskbar_height}px * 4) - (${taskbar_height}px * 4))
+    programs.style = `left: calc(${taskbar_height}px + 4px);
+                        width: calc(100% - (${taskbar_height}px * 4) - (${taskbar_height}px * 4) - (4px))
     `;
 
+    let programs_buttons_css = document.head.querySelector(`style#${TASKBAR_PROGRAMS_BUTTONS_ID}`);
+    if (programs_buttons_css)
+        programs_buttons_css.remove();
+    
+    programs_buttons_css = document.createElement("style");
+    programs_buttons_css.id = TASKBAR_PROGRAMS_BUTTONS_ID;
+    programs_buttons_css.textContent = `
+    div#taskbar > div#programs > button {
+        width: ${taskbar_height}px;
+        height: ${taskbar_height}px;
+    }
+    `;
+    document.head.appendChild(programs_buttons_css);
+
+    tray.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.tray`);
     tray.style = `right: calc(${taskbar_height}px * 3);
                     width: calc(${taskbar_height}px * 4)
     `;
     
 
+    clock.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.clock`);
     clock.style = `right: 0;
                     width: calc(${taskbar_height}px * 3);
                     font-size: calc(${taskbar_height}px / 2)
@@ -62,7 +84,5 @@ export function reload_taskbar() {
         clock.textContent = `${t.hour}:${t.minute}`;
         if (settings.desktop.taskbar.clock.show_seconds == true)
             clock.textContent += `:${t.second}`;
-    
-        clock.title = t.date;
     }, 1000);
 }

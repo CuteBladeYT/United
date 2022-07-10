@@ -40,6 +40,41 @@ div#taskbar > div#programs {
     width: 100%;
     height: 100%;
 }
+div#taskbar > div#programs > button {
+    position: relative;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    height: 100%;
+    background: transparent;
+    border: none;
+
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: transparent;
+}
+div#taskbar > div#programs > button > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+div#taskbar > div#programs > button.opened {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+div#taskbar > div#programs > button.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+div#taskbar > div#programs > button.awaiting {
+    background: rgba(255, 123, 0, 0.3);
+    border-bottom-color: rgba(255, 123, 0, 0.6);
+}
+div#taskbar > div#programs > button:hover {filter: brightness(2)}
+div#taskbar > div#programs > button:active {filter: brightness(1.4)}
 
 
 

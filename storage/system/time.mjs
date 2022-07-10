@@ -10,7 +10,7 @@ export function get_parsed() {
     let m = date.getMinutes();
     let s = date.getSeconds();
     let ms = date.getMilliseconds();
-    let var_date = date.getVarDate;
+    let var_date = date.toTimeString();
 
     if (d.toString().length == 1) d = "0" + d;
     if (mo.toString().length == 1) mo = "0" + mo;
