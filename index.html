@@ -9,9 +9,13 @@
         <script src="./storage/system/dewm/desktop/desktop.mjs" type="module"></script>
         <link rel="stylesheet" href="./storage/system/dewm/desktop/desktop.css">
 
+        <script src="./storage/system/dewm/desktop/mjs/notifications.mjs" type="module"></script>
+
+
 
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/wallpaper.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/notifications.css">
+        <link rel="stylesheet" href="./storage/system/dewm/desktop/css/window_manager.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/desktop_icons.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/taskbar.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/program_launcher.css">
@@ -28,15 +32,16 @@
 
         <div id="wallpaper"></div>
 
-        <div id="notifications">
-            <div>
-                <img src="./storage/system/imgs/icons/programs/google.png">
-                <button>New notification</button>
-                <progress min="0" max="100" value="60"></progress>
-            </div>
+        <div id="notifications"></div>
+
+
+
+        <div id="windows">
+            <webview src="" id="1"></webview>
+            <webview src="" id="2"></webview>
+            <webview src="" id="3"></webview>
+            <webview src="" id="4"></webview>
         </div>
-
-
 
         <div id="icons">
             <button>

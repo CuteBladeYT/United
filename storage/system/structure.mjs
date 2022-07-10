@@ -6,6 +6,15 @@ export let structure = {
     notifications: {
         self: "div#notifications"
     },
+    windows: {
+        self: "div#windows",
+        window: {
+            w1: "div#windows > #1",
+            w2: "div#windows > #2",
+            w3: "div#windows > #3",
+            w4: "div#windows > #4"
+        }
+    },
     dekstop_icons: {
         self: "div#icons",
     },
