@@ -11,5 +11,4 @@ import { notification } from "./mjs/notifications.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
     desktop_env.reload_desktop();
-    notification("sus");
 });

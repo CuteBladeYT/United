@@ -4,15 +4,81 @@ div#windows {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 8;
+}
+
+
+div#windows > div#control {
+    position: absolute;
+    top: -8vh;
+    left: calc(50% - (60% / 2));
+    width: 60%;
+    height: 10vh;
     backdrop-filter: blur(3px);
     background: rgba(0, 0, 0, 0.6);
     border: 3px white solid;
-    z-index: 8;
+    
+    transition: top 200ms ease;
+    z-index: 2;
 }
-div#windows > webview {
+div#windows > div#control:hover {
+    top: 0;
+}
+
+div#windows > div#control > button {
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: 0;
+    height: 100%;
+}
+div#windows > div#control > button#hide:hover {background: rgba(255, 255, 255, 0.4)}
+div#windows > div#control > button#hide:active {background: rgba(255, 255, 255, 0.2)}
+div#windows > div#control > button#close:hover {background: rgba(255, 0, 0, 0.4)}
+div#windows > div#control > button#close:active {background: rgba(255, 0, 0, 0.6)}
+div#windows > div#control > button > img {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+div#windows > div#control > button#title {
+    left: 0;
+    width: calc(100% - 20vh);
+    color: white;
+    font-family: main;
+    font-size: 3vh;
+}
+div#windows > div#control > button#hide {
+    right: 10vh;
+    width: 10vh;
+}
+div#windows > div#control > button#close {
+    right: 0;
+    width: 10vh;
+}
+
+
+div#windows > div#vw {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px white solid;
+}
+div#windows > div#vw > webview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+div#windows > div#vw > :last-child {
+    display: flex;
 }

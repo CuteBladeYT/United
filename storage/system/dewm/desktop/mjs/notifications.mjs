@@ -22,7 +22,7 @@ export function notification(text = String, icon = String, onclick) {
 
     let progress = document.createElement("progress");
     progress.min = 0;
-    progress.max = 1000 - 100;
+    progress.max = 1000;
     progress.value = 0;
 
     notif.appendChild(iconel);

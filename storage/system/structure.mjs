@@ -9,10 +9,8 @@ export let structure = {
     windows: {
         self: "div#windows",
         window: {
-            w1: "div#windows > #1",
-            w2: "div#windows > #2",
-            w3: "div#windows > #3",
-            w4: "div#windows > #4"
+            self: "div#windows > div#vw",
+            last: "div#windows > div#vw > :last-child"
         }
     },
     dekstop_icons: {
