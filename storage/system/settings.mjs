@@ -15,7 +15,8 @@ export let settings = {
             program_launcher: {
                 icon: "storage/system/icns/icon.png"
             }
-        }
+        },
+        font: "main" // hw || main
     },
     language: "en",
     experimental_mode: false

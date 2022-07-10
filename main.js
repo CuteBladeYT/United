@@ -112,6 +112,8 @@ function createWindow() {
         });
       });
     });
+
+    socket.on("reload", () => mainWindow.reload());
   });
 
   // Open the DevTools.
@@ -154,6 +156,8 @@ app.on("window-all-closed", function () {
 io.on("connection", async (socket) => {
   socket.leaveAll();
   socket.join();
+
+  socket.on("quit", () => app.quit());
 
   socket.on("save_string_to_file", async (patht = String, data = String) => {
     let err = fs.writeFileSync(patht, data);

@@ -24,5 +24,24 @@ export let structure = {
         clock: {
             self: "div#taskbar > button#clock"
         }
+    },
+    program_launcher: {
+        self: "div#program_launcher",
+        user: {
+            name: "div#program_launcher > span#user_name",
+            image: "div#program_launcher > img#user_image"
+        },
+        programs: {
+            self: "div#program_launcher > div#programs",
+            input: "div#program_launcher > div#programs > input[type=search]:nth-child(1)",
+            list: "div#program_launcher > div#programs > div#list"
+        },
+        actions: {
+            self: "div#program_launcher > div#actions",
+            buttons: {
+                shutdown: "div#program_launcher > div#actions > button#shutdown",
+                reload: "div#program_launcher > div#actions > button#reload"
+            }
+        }
     }
 }

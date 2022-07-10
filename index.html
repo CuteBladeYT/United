@@ -7,9 +7,12 @@
         <script>const socket = io();</script>
 
         <script src="./storage/system/dewm/desktop/desktop.mjs" type="module"></script>
+        <link rel="stylesheet" href="./storage/system/dewm/desktop/desktop.css">
+
 
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/wallpaper.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/taskbar.css">
+        <link rel="stylesheet" href="./storage/system/dewm/desktop/css/program_launcher.css">
 
         <style>body{overflow:hidden;user-select:none;background:black;color:white;}</style>
     </head>
@@ -25,6 +28,25 @@
 
         <div id="notifications">
 
+        </div>
+
+
+        
+        <div id="program_launcher">
+            <img id="user_image">
+            <span id="user_name"></span>
+
+            <div id="programs">
+                <input type="search" autocomplete="united__programs">
+                <div id="list">
+                    <button><img src="./storage/system/imgs/icons/programs/google.png">Google</button>
+                </div>
+            </div>
+
+            <div id="actions">
+                <button id="shutdown">Shutdown</button>
+                <button id="reload">Reload</button>
+            </div>
         </div>
 
         <div id="taskbar">

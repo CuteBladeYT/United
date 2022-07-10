@@ -1,7 +1,7 @@
 import * as time from "../../../time.mjs";
 import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
-import { translations, get_translation } from "../../../translations.mjs";
+import { get_translation } from "../../../translations.mjs";
 
 let clock_interval;
 
@@ -74,7 +74,8 @@ export function reload_taskbar() {
     clock.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.clock`);
     clock.style = `right: 0;
                     width: calc(${taskbar_height}px * 3);
-                    font-size: calc(${taskbar_height}px / 2)
+                    font-size: calc(${taskbar_height}px / 2);
+                    font-family: ${settings.desktop.font};
     `;
 
     if (clock_interval) clearInterval(clock_interval);

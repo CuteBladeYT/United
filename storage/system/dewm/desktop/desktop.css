@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar-track {
+    -webkit-appearance: none;
+    width: 0.5vw;
+    background: rgb(27, 27, 27);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-appearance: none;
+    background: rgb(155, 155, 155);
+}
+
+button {
+    cursor: inherit;
+}

@@ -169,6 +169,41 @@ export const translations = {
                 it: ""
             }
         },
+        program_launcher: {
+            programs: {
+                search_input: {
+                    placeholder: {
+                        en: "Search programs",
+                        pl: "Wyszukaj programy",
+                        bg: "",
+                        fr: "",
+                        ptbr: "",
+                        de: "",
+                        it: ""
+                    }
+                }
+            },
+            action_buttons: {
+                shutdown: {
+                    en: "Shutdown",
+                    pl: "Wyłącz",
+                    bg: "",
+                    fr: "",
+                    ptbr: "",
+                    de: "",
+                    it: ""
+                },
+                reload: {
+                    en: "Reload system",
+                    pl: "Przeładuj system",
+                    bg: "",
+                    fr: "",
+                    ptbr: "",
+                    de: "",
+                    it: ""
+                }
+            }
+        }
     },
     states: {
         battery: {
