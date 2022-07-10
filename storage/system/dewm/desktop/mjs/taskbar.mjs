@@ -3,16 +3,20 @@ import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
 import { get_translation } from "../../../translations.mjs";
 
+
+import * as program_launcher_util from "./program_launcher.mjs";
+
 let clock_interval;
 
 const TASKBAR_PROGRAMS_BUTTONS_ID = "TASKBAR_PROGRAMS_BUTTONS";
 
 let CURRENT_LANGUAGE = settings.language;
 
-export function reload_taskbar() {
+export function reload() {
     // get all elements
     let taskbar = document.querySelector(structure.taskbar.self);
     let program_launcher = document.querySelector(structure.taskbar.program_launcher.self);
+    let program_launcher_icon = document.querySelector(structure.taskbar.program_launcher.icon);
     let programs = document.querySelector(structure.taskbar.programs.self);
     let tray = document.querySelector(structure.taskbar.tray.self);
     let tray_imgs = {
@@ -44,8 +48,10 @@ export function reload_taskbar() {
     program_launcher.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.program_launcher.hover`);
     program_launcher.style.width = `${taskbar_height}px`;
     if (settings.experimental_mode)
-        program_launcher.firstChild.src = "storage/system/icns/nightly.png";
-    else program_launcher.firstChild.src = "storage/system/icns/icon.png";
+        program_launcher_icon.src = "storage/system/icns/nightly.png";
+    else program_launcher_icon.src = "storage/system/icns/icon.png";
+    program_launcher.onclick = () => program_launcher_util.change_visibility();
+    program_launcher_icon.draggable = false;
 
     programs.style = `left: calc(${taskbar_height}px + 4px);
                         width: calc(100% - (${taskbar_height}px * 4) - (${taskbar_height}px * 4) - (4px))

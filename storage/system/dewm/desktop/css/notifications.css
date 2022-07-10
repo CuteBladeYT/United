@@ -1,0 +1,63 @@
+div#notifications {
+    position: absolute;
+    top: 1vh;
+    right: 0;
+    max-height: 100%;
+    width: calc(40% + 1vh);
+    padding-right: 1vh;
+    z-index: 9;
+    contain: content;
+    overflow: hidden auto;
+    background: none;
+}
+
+div#notifications > div {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: .4vh;
+    width: auto;
+    min-height: 4.5vh;
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.9);
+    border: 3px white outset;
+}
+div#notifications > div:hover {background: rgba(90, 90, 90, 0.9)}
+div#notifications > div:active {background: rgba(40, 40, 40, 0.9)}
+
+div#notifications > div > img {
+    position: absolute;
+    top: .1vh;
+    left: .1vh;
+    height: calc(100% - .2vh - .5vh);
+}
+div#notifications > div > button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: calc(100% - .5vh);
+    background: none;
+    border: none;
+    color: white;
+    font-family: main;
+    font-size: 2.5vh;
+}
+div#notifications > div > progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .5vh;
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+div#notifications > div > progress::-webkit-progress-bar {
+    -webkit-appearance: none;
+    background: transparent;
+}
+div#notifications > div > progress::-webkit-progress-value {
+    -webkit-appearance: none;
+    background: white;
+}

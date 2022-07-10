@@ -3,6 +3,12 @@ export let structure = {
         self: "div#wallpaper",
         wp: "div#wallpaper > :nth-child(1)"
     },
+    notifications: {
+        self: "div#notifications"
+    },
+    dekstop_icons: {
+        self: "div#icons",
+    },
     taskbar: {
         self: "div#taskbar",
         program_launcher: {

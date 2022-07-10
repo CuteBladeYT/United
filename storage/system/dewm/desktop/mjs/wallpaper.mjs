@@ -1,7 +1,7 @@
 import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
 
-export function reload_wallpaper() {
+export function reload() {
     let wpel = document.querySelector(structure.wallpaper.wp);
     if (wpel) wpel.remove();
     wpel = document.createElement(settings.desktop.wallpaper.type);

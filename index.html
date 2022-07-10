@@ -11,6 +11,8 @@
 
 
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/wallpaper.css">
+        <link rel="stylesheet" href="./storage/system/dewm/desktop/css/notifications.css">
+        <link rel="stylesheet" href="./storage/system/dewm/desktop/css/desktop_icons.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/taskbar.css">
         <link rel="stylesheet" href="./storage/system/dewm/desktop/css/program_launcher.css">
 
@@ -27,11 +29,23 @@
         <div id="wallpaper"></div>
 
         <div id="notifications">
-
+            <div>
+                <img src="./storage/system/imgs/icons/programs/google.png">
+                <button>New notification</button>
+                <progress min="0" max="100" value="60"></progress>
+            </div>
         </div>
 
 
-        
+
+        <div id="icons">
+            <button>
+                <img src="./storage/system/imgs/icons/programs/google.png">
+                <span>Google</span>
+            </button>
+        </div>
+
+
         <div id="program_launcher">
             <img id="user_image">
             <span id="user_name"></span>
@@ -58,10 +72,10 @@
                 <button class="awaiting"><img></button>
             </div>
             <button id="tray">
-                <img id="notif" src="./storage/system/imgs/icons/tray/notification.png">
-                <img id="battery" src="./storage/system/imgs/icons/tray/no_battery.png">
-                <img id="volume" src="./storage/system/imgs/icons/tray/no_volume.png">
-                <img id="connect" src="./storage/system/imgs/icons/tray/no_wifi.png">
+                <img id="notif" draggable="false" src="./storage/system/imgs/icons/tray/notification.png">
+                <img id="battery" draggable="false" src="./storage/system/imgs/icons/tray/no_battery.png">
+                <img id="volume" draggable="false" src="./storage/system/imgs/icons/tray/no_volume.png">
+                <img id="connect" draggable="false" src="./storage/system/imgs/icons/tray/no_wifi.png">
             </button>
             <button id="clock">00:00:00</button>
         </div>

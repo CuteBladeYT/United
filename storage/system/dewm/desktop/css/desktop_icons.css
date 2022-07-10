@@ -1,0 +1,48 @@
+div#icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    contain: content;
+    overflow: hidden auto;
+}
+div#icons > button {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 96px;
+    min-height: 128px;
+    background: transparent;
+    border: 3px transparent outset;
+    margin: .12px;
+    cursor: pointer;
+}
+div#icons > button:hover {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+div#icons > button:active {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+div#icons > button > img {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    object-fit: contain;
+}
+div#icons > button > span {
+    position: absolute;
+    top: calc(92px);
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px);
+    color: white;
+    font-family: main;
+    font-size: 16px;
+    text-align: center;
+}

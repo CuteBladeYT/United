@@ -5,7 +5,7 @@ import { get_translation } from "../../../translations.mjs";
 
 const PROGRAM_LAUNCHER_PROGRAMS_CSS_ID = "PROGRAM_LAUNCHER_PROGRAMS_BUTTONS";
 
-export function reload_launcher() {
+export function reload() {
     let pl = document.querySelector(structure.program_launcher.self);
     let user = {
         name: document.querySelector(structure.program_launcher.user.name),
@@ -27,10 +27,12 @@ export function reload_launcher() {
 
     pl.style = `bottom: ${taskbar_height}px;
                 height: calc(100% - (${taskbar_height}px * 2));
+                display: none;
     `;
 
     user.name.textContent = user_data.name;
     user.image.src = user_data.image;
+    user.image.draggable = false;
 
     user.name.style = `font-family: ${settings.desktop.font};
     `;
@@ -48,6 +50,13 @@ export function reload_launcher() {
 
     actions.shutdown.onclick = () => socket.emit("quit");
     actions.reload.onclick = () => socket.emit("reload");
+}
 
-
+export function change_visibility() {
+    let l = document.querySelector(structure.program_launcher.self);
+    let isVis = l.style.display == "unset";
+    if (isVis)
+        l.style.display = "none";
+    else
+        l.style.display = "unset";
 }
