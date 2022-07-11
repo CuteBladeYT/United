@@ -4,9 +4,14 @@ import { structure } from "../../../structure.mjs";
 import { get_translation } from "../../../translations.mjs";
 
 
+import * as programs_data from "../../../../user/programs/data.mjs";
+
 import * as program_launcher_util from "./program_launcher.mjs";
+import * as window_api from "./window_manager.mjs";
 
 let clock_interval;
+let clock_show_date = false;
+let clock_month_name = false;
 
 const TASKBAR_PROGRAMS_BUTTONS_ID = "TASKBAR_PROGRAMS_BUTTONS";
 
@@ -77,19 +82,91 @@ export function reload() {
     `;
     
 
-    clock.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.clock`);
+    // clock.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.clock`);
     clock.style = `right: 0;
                     width: calc(${taskbar_height}px * 3);
                     font-size: calc(${taskbar_height}px / 2);
                     font-family: ${settings.desktop.font};
     `;
+    clock.onmouseenter = () => clock_show_date = true;
+    clock.onmouseleave = () => clock_show_date = false;
+    clock.onclick = () => clock_month_name = !clock_month_name;
 
     if (clock_interval) clearInterval(clock_interval);
     clock_interval = setInterval(() => {
         let t = time.get_parsed();
 
-        clock.textContent = `${t.hour}:${t.minute}`;
-        if (settings.desktop.taskbar.clock.show_seconds == true)
-            clock.textContent += `:${t.second}`;
+        if (clock_show_date == true) {
+            if (clock_month_name == true)
+                clock.textContent = `${t.day} ${get_translation(settings.language, `dates.months[${parseInt(t.monthd)}].short`)} ${t.year}`,
+                    clock.style.fontSize = `calc(${taskbar_height}px / 2.5)`;
+            else
+                clock.textContent = `${t.day}.${t.monthd}.${t.year}`,
+                    clock.style.fontSize = `calc(${taskbar_height}px / 2)`;
+        } else {
+            clock.textContent = `${t.hour}:${t.minute}`;
+            if (settings.desktop.taskbar.clock.show_seconds == true && clock_show_date == false)
+                clock.textContent += `:${t.second}`;
+            clock.style.fontSize = `calc(${taskbar_height}px / 2)`;
+        };
     }, 1000);
+
+    programs_data.programs.forEach(program => {
+        if (program.on_taskbar == true) {
+            add_tb_item(program);
+        };
+    });
+}
+
+
+export function add_tb_item(app_data = {
+    name: String,
+    id: String,
+    icon: String,
+    src: String,
+    on_taskbar: Boolean
+}) {
+    let btn = document.createElement("button");
+    btn.id = app_data.id;
+    btn.title = app_data.name;
+    btn.className = `on_taskbar_${app_data.on_taskbar}`;
+    btn.onclick = () => window_api.new_window(app_data);
+
+    let icn = document.createElement("img");
+    icn.src = app_data.icon;
+
+    btn.appendChild(icn);
+    document.querySelector(structure.taskbar.programs.self).appendChild(btn);
+}
+
+export function remove_tb_button(id = String) {
+    let btn = document.querySelector(`${structure.taskbar.programs.self} > button#${id}`);
+    if (btn)
+        btn.remove();
+    else return Error(`404: Button of ID ${id} not found`);
+    return 0
+}
+
+export function change_tb_button_state(id = String, state = String) {
+    let btn = document.querySelector(`${structure.taskbar.programs.self} > button#${id}`);
+    if (btn)
+        btn.remove();
+    else return Error(`404: Button of ID ${id} not found`);
+
+    let states = [
+        "",
+        "active",
+        "opened",
+        "awaiting"
+    ];
+
+    let state_found = false;
+    states.forEach(s => {
+        if (state == s)
+            state_found = true;
+    });
+    if (state_found)
+        btn.className = state;
+    else return Error(`404: Button state ${state} not found`);
+    return 0
 }

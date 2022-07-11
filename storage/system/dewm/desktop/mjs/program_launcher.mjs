@@ -3,6 +3,9 @@ import { settings } from "../../../settings.mjs";
 import { structure } from "../../../structure.mjs";
 import { get_translation } from "../../../translations.mjs";
 
+
+import * as programs_data from "../../../../user/programs/data.mjs";
+
 const PROGRAM_LAUNCHER_PROGRAMS_CSS_ID = "PROGRAM_LAUNCHER_PROGRAMS_BUTTONS";
 
 export function reload() {
@@ -52,6 +55,19 @@ export function reload() {
     actions.reload.style = `font-family: ${settings.desktop.font}`;
     actions.shutdown.onclick = () => socket.emit("quit");
     actions.reload.onclick = () => socket.emit("reload");
+
+    programs_data.programs.forEach(program => {
+        let btn = document.createElement("button");
+        btn.id = program.id;
+        btn.textContent = program.name;
+        btn.onclick = () => window_api.new_window(program);
+    
+        let icn = document.createElement("img");
+        icn.src = program.icon;
+    
+        btn.appendChild(icn);
+        document.querySelector(structure.program_launcher.programs.list).appendChild(btn);
+    });
 }
 
 export function change_visibility() {
