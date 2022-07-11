@@ -48,6 +48,8 @@ export function reload() {
     `;
     document.head.appendChild(prgbtncss);
 
+    actions.shutdown.style = `font-family: ${settings.desktop.font}`;
+    actions.reload.style = `font-family: ${settings.desktop.font}`;
     actions.shutdown.onclick = () => socket.emit("quit");
     actions.reload.onclick = () => socket.emit("reload");
 }

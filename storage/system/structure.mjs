@@ -8,6 +8,12 @@ export let structure = {
     },
     windows: {
         self: "div#windows",
+        control: {
+            self: "div#windows > div#control",
+            title: "div#windows > div#control > button#title",
+            hide: "div#windows > div#control > button#hide",
+            close: "div#windows > div#control > button#close"
+        },
         window: {
             self: "div#windows > div#vw",
             last: "div#windows > div#vw > :last-child"
