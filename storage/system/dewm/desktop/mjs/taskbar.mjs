@@ -41,12 +41,16 @@ export function reload() {
 
     if (settings.desktop.taskbar.auto_hide == true) {
         taskbar.onmouseenter = () => {
-            taskbar.style.bottom = `0`;
-            taskbar.style.opacity = "1";
+            if (document.querySelector(structure.program_launcher.self).style.display == "none") {
+                taskbar.style.bottom = `0`;
+                taskbar.style.opacity = "1";
+            };
         };
         taskbar.onmouseleave = () => {
-            taskbar.style.bottom = `calc(1px - ${taskbar_height}px)`;
-            taskbar.style.opacity = "0";
+            if (document.querySelector(structure.program_launcher.self).style.display == "none") {
+                taskbar.style.bottom = `calc(1px - ${taskbar_height}px)`;
+                taskbar.style.opacity = "0";
+            };
         };
     };
 
@@ -141,17 +145,17 @@ export function add_tb_item(app_data = {
 
 export function remove_tb_button(id = String) {
     let btn = document.querySelector(`${structure.taskbar.programs.self} > button#${id}`);
-    if (btn)
-        btn.remove();
+    if (btn != null)
+        if (btn.className.endsWith("false"))
+            btn.remove();
     else return Error(`404: Button of ID ${id} not found`);
     return 0
 }
 
 export function change_tb_button_state(id = String, state = String) {
     let btn = document.querySelector(`${structure.taskbar.programs.self} > button#${id}`);
-    if (btn)
-        btn.remove();
-    else return Error(`404: Button of ID ${id} not found`);
+    if (!btn)
+        return Error(`404: Button of ID ${id} not found`);
 
     let states = [
         "",

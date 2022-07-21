@@ -11,6 +11,7 @@ let current_opened_window = {
     name: String,
     id: String
 };
+let wm_height = "";
 
 export function reload() {
     let taskbar_height = settings.desktop.taskbar.height;
@@ -22,10 +23,16 @@ export function reload() {
         hide: document.querySelector(structure.windows.control.hide),
         close: document.querySelector(structure.windows.control.close)
     };
+
+    if (settings.desktop.taskbar.auto_hide == true)
+        wm_height = `height: calc(100% - (${taskbar_height}px * 2) / 4)`;
+    else
+        wm_height = `height: calc(100% - (${taskbar_height}px * 4) / 2.5)`;
     wm.style = `top: 0;
                 left: calc(${taskbar_height}px / 2);
                 width: calc(100% - (${taskbar_height}px * 2) / 2);
-                height: calc(100% - (${taskbar_height}px * 4) / 2.5);
+                ${wm_height};
+                display: none;
     `;
     wmw.style = `top: calc(${taskbar_height}px);
                 height: calc(100% - (${taskbar_height}px));
@@ -34,16 +41,35 @@ export function reload() {
 }
 
 export function set_control_info() {
-    let c = document.querySelector(structure.windows.control.self);
+    // let c = document.querySelector(structure.windows.control.self);
+    let wm = document.querySelector(structure.windows.self);
     let i = {
         title: document.querySelector(structure.windows.control.title),
         hide: document.querySelector(structure.windows.control.hide),
-        close: document.querySelector(structure.windows.control.c)
+        close: document.querySelector(structure.windows.control.close)
     };
     let wid = current_opened_window.id;
     i.title.textContent = current_opened_window.name;
 
-    i.close.onclick = () => { };
+    if (wid == "")
+        wm.style.display = "none";
+    else wm.style.display = "unset";
+
+    i.close.onclick = () => close_window(wid);
+    i.hide.onclick = () => show_desktop();
+}
+
+export function show_desktop() {
+    let wm = document.querySelector(structure.windows.self);
+    let c = document.querySelector(structure.windows.control.self);
+    let vw = document.querySelector(structure.windows.window.self);
+
+    if (vw.style.display == "none")
+        vw.style.display = "unset",
+            wm.style.height = wm_height;
+    else
+        vw.style.display = "none",
+            wv.style.height = "10vh";
 }
 
 export function switch_to_window(win_id = String) {
@@ -53,6 +79,7 @@ export function switch_to_window(win_id = String) {
             document.querySelector(structure.windows.window.self).appendChild(w.element);
             current_opened_window.name = w.app_data.name;
             current_opened_window.id = w.app_data.id;
+            set_control_info();
         };
     });
     if (wfound == false) return Error("404: Window ID not found");
@@ -63,24 +90,22 @@ export function close_window(win_id = String) {
     let wfound = false;
     windows.forEach(w => {
         if (w.app_data.id == win_id)
-            w.element.remove(),
+            wfound = true,
+                w.element.remove(),
                 windows.splice(windows.indexOf(w), 1),
-                wfound = true;
+                current_opened_window.id = "",
+                current_opened_window.name = "";
     });
     if (wfound == false) return Error("404: Window ID not found");
 
-    let tb_btn = document.querySelector(`structure.taskbar.programs.self > button#${win_id}`);
-    if (tb_btn) {
-        if (tb_btn.className.endsWith("false"))
-            tb_btn.remove();
-        else
-            change_tb_button_state(tb_btn.id, "");
-    };
+    change_tb_button_state(win_id, "");
+    remove_tb_button(win_id);
 
     if (windows.length > 0)
         switch_to_window(windows[windows.length - 1].app_data.id);
+    else set_control_info();
 
-    return 0
+    return 0;
 }
 export function new_window(app_data = {
     name: String,
@@ -90,11 +115,25 @@ export function new_window(app_data = {
     on_taskbar: Boolean
 }) {
     let vw = document.querySelector(structure.windows.window.self);
-    vw.innerHTML += `<webview id="${app_data.id}" src="${app_data.src}"></webview>`;
-    windows.push({
-        app_data: app_data,
-        element: document.querySelector(structure.windows.window.last)
+    let win_exist = false;
+    windows.forEach(w => {
+        if (app_data.id == w.app_data.id)
+            win_exist = true;
     });
+    if (win_exist == true)
+        switch_to_window(app_data.id),
+            windows.forEach(w => {
+                change_tb_button_state(w.element.id, "opened");
+            });
+    else {
+        vw.innerHTML += `<webview id="${app_data.id}" src="${app_data.src}"></webview>`;
+        windows.push({
+            app_data: app_data,
+            element: document.querySelector(structure.windows.window.last)
+        });
+    };
     current_opened_window.name = app_data.name;
     current_opened_window.id = app_data.id;
+    set_control_info();
+    change_tb_button_state(app_data.id, "active");
 }

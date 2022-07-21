@@ -8,6 +8,7 @@ import { structure } from "../../structure.mjs";
 import * as desktop_env from "./mjs/denv.mjs";
 
 import { notification } from "./mjs/notifications.mjs";
+import * as sounds from "./mjs/sound_player.mjs";
 
 document.addEventListener("DOMContentLoaded", async () => {
     desktop_env.reload_desktop();

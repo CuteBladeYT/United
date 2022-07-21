@@ -5,6 +5,7 @@ import { get_translation } from "../../../translations.mjs";
 
 
 import * as programs_data from "../../../../user/programs/data.mjs";
+import * as window_api from "./window_manager.mjs";
 
 const PROGRAM_LAUNCHER_PROGRAMS_CSS_ID = "PROGRAM_LAUNCHER_PROGRAMS_BUTTONS";
 
@@ -60,7 +61,10 @@ export function reload() {
         let btn = document.createElement("button");
         btn.id = program.id;
         btn.textContent = program.name;
-        btn.onclick = () => window_api.new_window(program);
+        btn.onclick = () => {
+            window_api.new_window(program);
+            change_visibility();
+        };
     
         let icn = document.createElement("img");
         icn.src = program.icon;
