@@ -174,5 +174,4 @@ io.on("connection", async (socket) => {
     let err = fs.writeFileSync("storage/system/settings.mjs", data);
     if (err) throw err;
   });
-
 });

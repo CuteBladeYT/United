@@ -1,5 +1,5 @@
-import { settings } from "../../../settings.mjs";
-import { structure } from "../../../structure.mjs";
+import { settings } from "../../settings.mjs";
+import { structure } from "../../structure.mjs";
 
 export function reload() {
     let wpel = document.querySelector(structure.wallpaper.wp);

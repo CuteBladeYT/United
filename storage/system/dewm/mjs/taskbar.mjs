@@ -1,10 +1,10 @@
-import * as time from "../../../time.mjs";
-import { settings } from "../../../settings.mjs";
-import { structure } from "../../../structure.mjs";
-import { get_translation } from "../../../translations.mjs";
+import * as time from "../../time.mjs";
+import { settings } from "../../settings.mjs";
+import { structure } from "../../structure.mjs";
+import { get_translation } from "../../translations.mjs";
 
 
-import * as programs_data from "../../../../user/programs/data.mjs";
+import * as programs_data from "../../../user/programs/data.mjs";
 
 import * as program_launcher_util from "./program_launcher.mjs";
 import * as window_api from "./window_manager.mjs";

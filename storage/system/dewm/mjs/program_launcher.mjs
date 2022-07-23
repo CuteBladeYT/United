@@ -1,10 +1,10 @@
-import { user_data } from "../../../../user/data.mjs";
-import { settings } from "../../../settings.mjs";
-import { structure } from "../../../structure.mjs";
-import { get_translation } from "../../../translations.mjs";
+import { user_data } from "../../../user/data.mjs";
+import { settings } from "../../settings.mjs";
+import { structure } from "../../structure.mjs";
+import { get_translation } from "../../translations.mjs";
 
 
-import * as programs_data from "../../../../user/programs/data.mjs";
+import * as programs_data from "../../../user/programs/data.mjs";
 import * as window_api from "./window_manager.mjs";
 
 const PROGRAM_LAUNCHER_PROGRAMS_CSS_ID = "PROGRAM_LAUNCHER_PROGRAMS_BUTTONS";

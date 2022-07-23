@@ -1,6 +1,6 @@
-import { settings } from "../../../settings.mjs";
-import { structure } from "../../../structure.mjs";
-import { get_translation } from "../../../translations.mjs";
+import { settings } from "../../settings.mjs";
+import { structure } from "../../structure.mjs";
+import { get_translation } from "../../translations.mjs";
 
 export function reload() {
     let notifs = document.querySelector(structure.notifications.self);

@@ -17,7 +17,7 @@ div#windows > div#control {
     backdrop-filter: blur(3px);
     background: rgba(0, 0, 0, 0.6);
     border: 3px white solid;
-    
+
     transition: top 200ms ease;
     z-index: 2;
 }
@@ -79,6 +79,8 @@ div#windows > div#vw > webview {
     height: 100%;
     display: none;
 }
+    /*
 div#windows > div#vw > :last-child {
     display: flex;
 }
+    */
