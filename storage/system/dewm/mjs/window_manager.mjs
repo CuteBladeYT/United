@@ -4,6 +4,7 @@ import { get_translation } from "../../translations.mjs";
 
 
 import { change_tb_button_state, remove_tb_button, add_tb_item } from "./taskbar.mjs";
+import * as taskbar_ from "./taskbar.mjs";
 
 let windows = [];
 
@@ -85,7 +86,10 @@ export function switch_to_window(win_id = String) {
             current_opened_window.name = w.app_data.name;
             current_opened_window.id = w.app_data.id;
             set_control_info();
-        } else w.element.style.display = "none";
+        } else {
+            w.element.style.display = "none";
+            change_tb_button_state(w.app_data.id, "opened")
+        };
     });
     if (wfound == false) return Error("404: Window ID not found");
     return 0
@@ -128,18 +132,22 @@ export function new_window(app_data = {
     if (win_exist == true)
         switch_to_window(app_data.id),
         windows.forEach(w => {
-        change_tb_button_state(w.element.id, "opened");
-    });
+            change_tb_button_state(w.element.id, "opened");
+        });
     else {
         vw.innerHTML += `<webview id="${app_data.id}" src="${app_data.src}"></webview>`;
-        if (windows.length > 4) close_window(windows[0].app_data.id);
+        //if (windows.length > 4) close_window(windows[0].app_data.id);
         windows.push({
             app_data: app_data,
             element: document.querySelector(structure.windows.window.last)
         });
+        if (taskbar_.check_if_exist(app_data.id) == false) {
+            add_tb_item(app_data);
+        };
     };
     current_opened_window.name = app_data.name;
     current_opened_window.id = app_data.id;
+    //add_tb_item(app_data);
     set_control_info();
     change_tb_button_state(app_data.id, "active");
     switch_to_window(app_data.id);

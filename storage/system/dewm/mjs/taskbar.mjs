@@ -174,3 +174,13 @@ export function change_tb_button_state(id = String, state = String) {
     else return Error(`404: Button state ${state} not found`);
     return 0
 }
+
+export function check_if_exist(app_id = String) {
+    let btn_exist = false;
+
+    document.querySelector(structure.taskbar.programs.self).childNodes.forEach(btn => {
+        if (app_id = btn.id) btn_exist = true;
+    });
+
+    return btn_exist
+}
