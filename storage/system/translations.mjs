@@ -112,7 +112,6 @@ export const translations = {
             },
             id: "it"
         }
-
     ],
     structure: {
         taskbar: {

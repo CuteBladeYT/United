@@ -160,6 +160,10 @@ io.on("connection", async (socket) => {
     socket.leaveAll();
     socket.join();
 
+    function socket_custom_prop(key = String, value) {
+        socket.emit("set_custom_prop", (key, value));
+    };
+
     socket.on("quit", () => app.quit());
 
     socket.on("save_string_to_file", async (patht = String, data = String) => {
@@ -170,6 +174,15 @@ io.on("connection", async (socket) => {
     socket.on("read_file", async (patht = String, return_channel = String) => {
         let data = fs.readFileSync(patht, "utf-8");
         socket.emit(return_channel, data);
+        socket_custom_prop(return_channel, data);
+        socket.emit("set_custom_prop", (key, value));
+    });
+
+    socket.on("list_files", async (patht = String, return_channel = String) => {
+        let files = fs.readdirSync(patht);
+        socket.emit(return_channel, files);
+        socket_custom_prop(return_channel, files);
+        socket.emit("set_custom_prop", (key, value));
     });
 
     socket.on("save_settings", async (settings = {} || String) => {

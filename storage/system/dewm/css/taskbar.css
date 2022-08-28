@@ -1,12 +1,3 @@
-@font-face {
-    font-family: main;
-    src: url(../../fonts/main.ttf);
-}
-@font-face {
-    font-family: hw;
-    src: url(../../fonts/handwriting.ttf);
-}
-
 div#taskbar {
     position: absolute;
     bottom: 0;

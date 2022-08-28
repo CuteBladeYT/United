@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="./style.css">
+
+        
+        <script src="/socket.io/socket.io.js"></script>
+        <script>const socket = io();</script>
+        
+
+        <script src="./script.mjs" type="module"></script>
+    </head>
+
+    <body>
+        <h1>System settings</h1>
+
+        <button id="save">Save settings</button>
+       
+        <br><br>
+
+        <details id="appearance">
+            <summary>Appearance</summary>
+            <div>
+                <div id="wallpaper">
+                    <h3>Wallpaper</h3>
+                    <div id="items"></div>
+                    <br><br>
+                    <span>Wallpaper type</span>
+                    <select id="type">
+                        <option value="img" id="image">Image</option>
+                        <option value="video" id="video">Video</option>
+                    </select>
+                    <br>
+                    <span>Wallpaper fit mode</span>
+                    <select id="fit_mode">
+                        <option value="cover" id="cover">Cover</option>
+                        <option value="contain" id="contain">Contain</option>
+                    </select>
+                    <br>
+                    <span>Wallpaper background</span>
+                    <input type="color" id="bg_color">
+                </div>
+                <br><br>
+                <div id="taskbar">
+                    <h3>Taskbar</h3>
+                    <span>Height</span>
+                        <input type="number" id="tb_height">
+                        <span>px</span>
+                    <br>
+                    <span>Auto hide</span> <input type="checkbox" id="autohide">
+                    <br>
+                    <span>Show clock seconds</span> <input type="checkbox" id="clock_seconds">
+                </div>
+            </div>
+        </details>
+
+        <details id="accessibility">
+            <summary>Accessibility</summary>
+            <div>
+                <span>Language</span>
+                <select id="language">
+                    
+                </select>
+            </div>
+        </details>
+
+        <details id="features">
+            <summary>Features</summary>
+            <div>
+                <span>Experimental mode</span>
+                    <input type="checkbox" id="experimental_mode">
+            </div>
+        </details>
+    </body>
+</html>

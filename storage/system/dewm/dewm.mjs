@@ -13,3 +13,7 @@ import * as sounds from "./mjs/sound_player.mjs";
 document.addEventListener("DOMContentLoaded", async () => {
     desktop_env.reload_desktop();
 });
+
+socket.on("set_custom_prop", (key, value) => {
+    eval(`socket.${key} = ${value}`);
+});

@@ -113,7 +113,7 @@ export function reload() {
                 clock.textContent += `:${t.second}`;
             clock.style.fontSize = `calc(${taskbar_height}px / 2)`;
         };
-    }, 1000);
+    }, 100);
 
     programs_data.programs.forEach(program => {
         if (program.on_taskbar == true) {

@@ -1,11 +1,11 @@
-@font-face {
+/*@font-face {
     font-family: main;
     src: url(../../../fonts/main.ttf);
 }
 @font-face {
     font-family: hw;
     src: url(../../../fonts/handwriting.ttf);
-}
+}*/
 
 div#program_launcher {
     position: absolute;

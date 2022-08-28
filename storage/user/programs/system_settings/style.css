@@ -1,0 +1,44 @@
+@font-face {
+    font-family: main;
+    src: url(../../../system/fonts/main.ttf);
+}
+@font-face {
+    font-family: hw;
+    src: url(../../../system/fonts/handwriting.ttf);
+}
+
+body {
+    font-family: main;
+    background: rgba(17, 17, 27, 0.6);
+    color: white;
+}
+
+body > h1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+body h1 {font-size: 32px}
+body h2 {font-size: 28px}
+body h3 {font-size: 24px}
+body h4 {font-size: 20px}
+
+details#appearance > div > div#wallpaper > div#items {
+    width: 100%;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px rgba(200, 200, 200, 0.1) solid;
+    overflow: hidden auto;
+    contain: content;
+}
+details#appearance > div > div#wallpaper > div#items > img {
+    position: relative;
+    width: 456px;
+    height: 256px;
+    object-fit: cover;
+    margin: 8px;
+    border: 3px white solid;
+    cursor: pointer;
+}
