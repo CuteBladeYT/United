@@ -9,6 +9,8 @@ import * as window_api from "./window_manager.mjs";
 
 const PROGRAM_LAUNCHER_PROGRAMS_CSS_ID = "PROGRAM_LAUNCHER_PROGRAMS_BUTTONS";
 
+const CURRENT_LANGUAGE = settings.language;
+
 export function reload() {
     let pl = document.querySelector(structure.program_launcher.self);
     let user = {
@@ -41,6 +43,8 @@ export function reload() {
     user.name.style = `font-family: ${settings.desktop.font};
     `;
 
+    programs.input.placeholder = get_translation(CURRENT_LANGUAGE, `structure.program_launcher.programs.search_input.placeholder`);
+
     let prgbtncss = document.head.querySelector(`style#${PROGRAM_LAUNCHER_PROGRAMS_CSS_ID}`);
     if (prgbtncss) prgbtncss.remove();
     prgbtncss = document.createElement("style");
@@ -56,6 +60,9 @@ export function reload() {
     actions.reload.style = `font-family: ${settings.desktop.font}`;
     actions.shutdown.onclick = () => socket.emit("quit");
     actions.reload.onclick = () => socket.emit("reload");
+
+    actions.shutdown.textContent = get_translation(CURRENT_LANGUAGE, `structure.program_launcher.action_buttons.shutdown`);
+    actions.reload.textContent = get_translation(CURRENT_LANGUAGE, `structure.program_launcher.action_buttons.reload`);
 
     programs_data.programs.forEach(program => {
         let btn = document.createElement("button");

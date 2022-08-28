@@ -10,7 +10,8 @@ export const translations = {
                 fr: "Anglais",
                 ptbr: "Português (Brasileiro)",
                 de: "Englisch",
-                it: ""
+                it: "Inglese",
+                jp: "英語"
             },
             id: "en"
         },
@@ -24,7 +25,8 @@ export const translations = {
                 fr: "Polonais",
                 ptbr: "Polonês",
                 de: "Polnisch",
-                it: ""
+                it: "Polacco",
+                jp: "ポーランドの"
             },
             id: "pl"
         },
@@ -38,7 +40,8 @@ export const translations = {
                 fr: "Bulgare",
                 ptbr: "Bulgária",
                 de: "Bulgarisch",
-                it: ""
+                it: "Bulgaro",
+                jp: "ブルガリア語"
             },
             id: "bg"
         },
@@ -52,7 +55,8 @@ export const translations = {
                 fr: "Ukrainien",
                 ptbr: "Ucrâniano",
                 de: "Ukrainisch",
-                it: ""
+                it: "Ucraino",
+                jp: "ウクライナ語"
             },
             id: "ua"
         },
@@ -66,7 +70,8 @@ export const translations = {
                 fr: "Français",
                 ptbr: "Francês",
                 de: "Französisch",
-                it: ""
+                it: "Francese",
+                jp: "フランス語"
             },
             id: "fr"
         },
@@ -76,11 +81,12 @@ export const translations = {
                 en: "Portugese (Brazil)",
                 pl: "Portugalski (Brazylia)",
                 bg: "Португалски (Бразилия)",
-                ua: "",
-                fr: "",
+                ua: "Португальська (Бразилія)",
+                fr: "Portugais (Brésil)",
                 ptbr: "Português (Brasileiro)",
-                de: "Portugiesisch",
-                it: ""
+                de: "Portugiesisch (Brasilien)",
+                it: "Portoghese (Brasile)",
+                jp: "ポルトガル語 (ブラジル)"
             },
             id: "ptbr"
         },
@@ -90,27 +96,44 @@ export const translations = {
                 en: "German",
                 pl: "Niemiecki",
                 bg: "Немски",
-                ua: "",
+                ua: "Німецький",
                 fr: "Allemand",
-                ptbr: "",
+                ptbr: "Alemão",
                 de: "Deutsch",
-                it: ""
+                it: "Tedesco",
+                jp: "ドイツ人"
             },
             id: "de"
         },
         {
             name: {
-                og: "",
+                og: "Italiano",
                 en: "Italian",
                 pl: "Włoski",
-                bg: "",
-                ua: "",
-                fr: "",
-                ptbr: "",
-                de: "",
-                it: ""
+                bg: "Италиански",
+                ua: "італійська",
+                fr: "Italien",
+                ptbr: "Italiano",
+                de: "Italienisch",
+                it: "Italiano",
+                jp: "イタリアの"
             },
             id: "it"
+        },
+        {
+            name: {
+                og: "日本語",
+                en: "Japanese",
+                pl: "Japoński",
+                bg: "японски",
+                ua: "Японський",
+                fr: "Japonais",
+                ptbr: "Japonês",
+                de: "Japanisch",
+                it: "Giapponese",
+                jp: "日本語"
+            },
+            id: "jp"
         }
     ],
     structure: {
@@ -124,7 +147,8 @@ export const translations = {
                     fr: "Programme",
                     ptbr: "Lançador",
                     de: "Programme",
-                    it: ""
+                    it: "Programmi",
+                    jp: "プログラム"
                 },
                 hover: {
                     en: "Launch programs",
@@ -134,38 +158,42 @@ export const translations = {
                     fr: "Execution des programmes",
                     ptbr: "Executar Programas",
                     de: "Programme ausführen",
-                    it: ""
+                    it: "Avvia programmi",
+                    jp: "起動プログラム"
                 }
             },
             programs: {
                 en: "Programs",
                 pl: "Programy",
-                bg: "",
-                ua: "",
-                fr: "",
-                ptbr: "",
-                de: "",
-                it: ""
+                bg: "Програми",
+                ua: "Програми",
+                fr: "Programmes",
+                ptbr: "Programas",
+                de: "Programme",
+                it: "Programmi",
+                jp: "プログラム"
             },
             tray: {
                 en: "Tray",
                 pl: "Tacka systemowa",
-                bg: "",
-                ua: "",
-                fr: "",
-                ptbr: "",
-                de: "",
-                it: ""
+                bg: "Системна област",
+                ua: "Системний трей",
+                fr: "Barre d'état système",
+                ptbr: "Bandeja do sistema",
+                de: "System Tray",
+                it: "Area di notifica",
+                jp: "システムトレイ"
             },
             clock: {
                 en: "Clock",
                 pl: "Zegar",
-                bg: "",
-                ua: "",
-                fr: "",
-                ptbr: "",
-                de: "",
-                it: ""
+                bg: "Часовник",
+                ua: "Годинник",
+                fr: "L'horloge",
+                ptbr: "Relógio",
+                de: "Uhr",
+                it: "Orologio",
+                jp: "時計"
             }
         },
         program_launcher: {
@@ -174,11 +202,13 @@ export const translations = {
                     placeholder: {
                         en: "Search programs",
                         pl: "Wyszukaj programy",
-                        bg: "",
-                        fr: "",
-                        ptbr: "",
-                        de: "",
-                        it: ""
+                        bg: "Програми за търсене",
+                        ua: "Пошукові програми",
+                        fr: "Rechercher des programmes",
+                        ptbr: "Programas de pesquisa",
+                        de: "Programme suchen",
+                        it: "Cerca programmi",
+                        jp: "番組を探す"
                     }
                 }
             },
@@ -186,20 +216,24 @@ export const translations = {
                 shutdown: {
                     en: "Shutdown",
                     pl: "Wyłącz",
-                    bg: "",
-                    fr: "",
-                    ptbr: "",
-                    de: "",
-                    it: ""
+                    bg: "Изключвам",
+                    ua: "Вимкнено живлення",
+                    fr: "Éteindre",
+                    ptbr: "Desligar",
+                    de: "Ausschalten",
+                    it: "Spegni",
+                    jp: "シャットダウン"
                 },
                 reload: {
                     en: "Reload system",
                     pl: "Przeładuj system",
-                    bg: "",
-                    fr: "",
-                    ptbr: "",
-                    de: "",
-                    it: ""
+                    bg: "Система за презареждане",
+                    ua: "Система перезавантаження",
+                    fr: "Système de rechargement",
+                    ptbr: "Recarregar sistema",
+                    de: "System neu ladenSystem neu laden",
+                    it: "Ricarica il sistema",
+                    jp: "システムをリロードする"
                 }
             }
         }
@@ -213,7 +247,8 @@ export const translations = {
             fr: "Batterie",
             ptbr: "Bateria",
             de: "Batterie",
-            it: "",
+            it: "Batteria",
+            jp: "",
             charging: {
                 en: "Charging",
                 pl: "Ładowanie",
@@ -222,7 +257,8 @@ export const translations = {
                 fr: "Mise en charge",
                 ptbr: "Carregando",
                 de: "Lädt",
-                it: ""
+                it: "Ricarica",
+                jp: "バッテリー"
             }
         },
         volume: {
@@ -233,7 +269,8 @@ export const translations = {
             fr: "Volume",
             ptbr: "Volume",
             de: "Lautstärke",
-            it: "",
+            it: "Volume",
+            jp: "音量",
             muted: {
                 en: "Muted",
                 pl: "Wyciszone",
@@ -242,7 +279,8 @@ export const translations = {
                 fr: "Muet",
                 ptbr: "Mudo",
                 de: "Ton aus",
-                it: ""
+                it: "Muto",
+                jp: "ミュート"
             }
         },
         connection: {
@@ -251,9 +289,10 @@ export const translations = {
             bg: "Мрежа",
             ua: "Мережа",
             fr: "Réseau",
-            ptbr: "",
+            ptbr: "Rede",
             de: "Netzwerk",
-            it: "",
+            it: "Rete",
+            jp: "通信網",
             state: {
                 true: {
                     en: "Connected",
@@ -263,7 +302,8 @@ export const translations = {
                     fr: "Connecté",
                     ptbr: "Conectado",
                     de: "Verbunden",
-                    it: ""
+                    it: "Connesso",
+                    jp: "接続済み"
                 },
                 false: {
                     en: "Disconnected",
@@ -273,7 +313,8 @@ export const translations = {
                     fr: "Déconnecté",
                     ptbr: "Desconectado",
                     de: "Getrennt",
-                    it: ""
+                    it: "Disconnesso",
+                    jp: "切断されました"
                 }
             }
         }
@@ -289,7 +330,8 @@ export const translations = {
                     fr: "Janvier",
                     ptbr: "Janeiro",
                     de: "Januar",
-                    it: ""
+                    it: "Gennaio",
+                    jp: "一月"
                 },
                 short: {
                     en: "Jan",
@@ -299,7 +341,8 @@ export const translations = {
                     fr: "Janv",
                     ptbr: "Jan",
                     de: "Jan",
-                    it: ""
+                    it: "Gen",
+                    jp: "一月"
                 }
             },
             {
@@ -311,7 +354,8 @@ export const translations = {
                     fr: "Février",
                     ptbr: "Fevereiro",
                     de: "Februar",
-                    it: ""
+                    it: "Febbraio",
+                    jp: "二月"
                 },
                 short: {
                     en: "Feb",
@@ -321,7 +365,8 @@ export const translations = {
                     fr: "Févr",
                     ptbr: "Fev",
                     de: "Feb",
-                    it: ""
+                    it: "Feb",
+                    jp: "二月"
                 }
             },
             {
@@ -333,7 +378,8 @@ export const translations = {
                     fr: "Mars",
                     ptbr: "Março",
                     de: "März",
-                    it: ""
+                    it: "Marzo",
+                    jp: "三月"
                 },
                 short: {
                     en: "Mar",
@@ -343,7 +389,8 @@ export const translations = {
                     fr: "Mars",
                     ptbr: "Mar",
                     de: "Mär",
-                    it: ""
+                    it: "Mar",
+                    jp: "三月"
                 }
             },
             {
@@ -355,7 +402,8 @@ export const translations = {
                     fr: "Avril",
                     ptbr: "Abril",
                     de: "April",
-                    it: ""
+                    it: "Aprile",
+                    jp: "四月"
                 },
                 short: {
                     en: "Apr",
@@ -365,7 +413,8 @@ export const translations = {
                     fr: "Avr",
                     ptbr: "Abr",
                     de: "Apr",
-                    it: ""
+                    it: "Apr",
+                    jp: "四月"
                 }
             },
             {
@@ -377,7 +426,8 @@ export const translations = {
                     fr: "Mai",
                     ptbr: "Maio",
                     de: "Mai",
-                    it: ""
+                    it: "Maggio",
+                    jp: "五月"
                 },
                 short: {
                     en: "May",
@@ -387,7 +437,8 @@ export const translations = {
                     fr: "Mai",
                     ptbr: "Maio",
                     de: "Mai",
-                    it: ""
+                    it: "Mag",
+                    jp: "五月"
                 }
             },
             {
@@ -399,7 +450,8 @@ export const translations = {
                     fr: "Juin",
                     ptbr: "Junho",
                     de: "Juni",
-                    it: ""
+                    it: "Giugno",
+                    jp: "六月"
                 },
                 short: {
                     en: "Jun",
@@ -409,7 +461,8 @@ export const translations = {
                     fr: "Juin",
                     ptbr: "Jun",
                     de: "Jun",
-                    it: ""
+                    it: "Giu",
+                    jp: "六月"
                 }
             },
             {
@@ -421,7 +474,8 @@ export const translations = {
                     fr: "Juillet",
                     ptbr: "Julho",
                     de: "Juli",
-                    it: ""
+                    it: "Luglio",
+                    jp: "七月"
                 },
                 short: {
                     en: "Jul",
@@ -431,7 +485,8 @@ export const translations = {
                     fr: "Juill",
                     ptbr: "Jul",
                     de: "Jul",
-                    it: ""
+                    it: "Lug",
+                    jp: "七月"
                 }
             },
             {
@@ -443,7 +498,8 @@ export const translations = {
                     fr: "Août",
                     ptbr: "Agosto",
                     de: "August",
-                    it: ""
+                    it: "Agosto",
+                    jp: "八月"
                 },
                 short: {
                     en: "Aug",
@@ -453,7 +509,8 @@ export const translations = {
                     fr: "Août",
                     ptbr: "Ago",
                     de: "Aug",
-                    it: ""
+                    it: "Ago",
+                    jp: "八月"
                 }
             },
             {
@@ -465,7 +522,8 @@ export const translations = {
                     fr: "Septembre",
                     ptbr: "Setembro",
                     de: "September",
-                    it: ""
+                    it: "Settembre",
+                    jp: "九月"
                 },
                 short: {
                     en: "Sep",
@@ -475,7 +533,8 @@ export const translations = {
                     fr: "Septembre",
                     ptbr: "Set",
                     de: "Sep",
-                    it: ""
+                    it: "Set",
+                    jp: "九月"
                 }
             },
             {
@@ -487,7 +546,8 @@ export const translations = {
                     fr: "Octobre",
                     ptbr: "Outubro",
                     de: "Oktober",
-                    it: ""
+                    it: "Ottobre",
+                    jp: "十月"
                 },
                 short: {
                     en: "Oct",
@@ -497,7 +557,8 @@ export const translations = {
                     fr: "Oct",
                     ptbr: "Out",
                     de: "Okt",
-                    it: ""
+                    it: "Ott",
+                    jp: "十月"
                 }
             },
             {
@@ -509,7 +570,8 @@ export const translations = {
                     fr: "Novembre",
                     ptbr: "Novembro",
                     de: "November",
-                    it: ""
+                    it: "Novembre",
+                    jp: "十一月"
                 },
                 short: {
                     en: "Nov",
@@ -519,7 +581,8 @@ export const translations = {
                     fr: "Nov",
                     ptbr: "Nov",
                     de: "Nov",
-                    it: ""
+                    it: "Nov",
+                    jp: "十一月"
                 }
             },
             {
@@ -531,7 +594,8 @@ export const translations = {
                     fr: "Décembre",
                     ptbr: "Dezembro",
                     de: "Dezember",
-                    it: ""
+                    it: "Dicembre",
+                    jp: "十二月"
                 },
                 short: {
                     en: "Dec",
@@ -541,7 +605,8 @@ export const translations = {
                     fr: "Déc",
                     ptbr: "Dez",
                     de: "Dez",
-                    it: ""
+                    it: "Dic",
+                    jp: "十二月"
                 }
             }
         ],
@@ -554,7 +619,8 @@ export const translations = {
                 fr: "Milliseconde",
                 ptbr: "Milisegundo",
                 de: "Millisekunde",
-                it: ""
+                it: "Millisecondo",
+                jp: "ミリセカント"
             },
             second: {
                 en: "Second",
@@ -564,7 +630,8 @@ export const translations = {
                 fr: "Seconde",
                 ptbr: "Segundo",
                 de: "Sekunde",
-                it: ""
+                it: "Secondo",
+                jp: "セカンド"
             },
             minute: {
                 en: "Minute",
@@ -574,7 +641,8 @@ export const translations = {
                 fr: "Minute",
                 ptbr: "Minuto",
                 de: "Minute",
-                it: ""
+                it: "Minuto",
+                jp: "分"
             },
             hour: {
                 en: "Hour",
@@ -584,7 +652,8 @@ export const translations = {
                 fr: "Heure",
                 ptbr: "Hora",
                 de: "Stunde",
-                it: ""
+                it: "Ora",
+                jp: "アワー"
             },
             day: {
                 en: "Day",
@@ -594,7 +663,8 @@ export const translations = {
                 fr: "Jour",
                 ptbr: "Dia",
                 de: "Tag",
-                it: ""
+                it: "Giorno",
+                jp: "日"
             },
             week: {
                 en: "Week",
@@ -604,7 +674,8 @@ export const translations = {
                 fr: "Semaine",
                 ptbr: "Semana",
                 de: "Woche",
-                it: ""
+                it: "Settimana",
+                jp: "週"
             },
             month: {
                 en: "Month",
@@ -614,7 +685,8 @@ export const translations = {
                 fr: "Mois",
                 ptbr: "Mês",
                 de: "Monat",
-                it: ""
+                it: "Mese",
+                jp: "月"
             },
             year: {
                 en: "Year",
@@ -624,7 +696,8 @@ export const translations = {
                 fr: "Année",
                 ptbr: "Ano",
                 de: "Jahr",
-                it: ""
+                it: "Anno",
+                jp: "年"
             }
         }
     }

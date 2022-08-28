@@ -56,6 +56,7 @@ export function reload() {
 
     program_launcher.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.program_launcher.hover`);
     program_launcher.style.width = `${taskbar_height}px`;
+
     if (settings.experimental_mode)
         program_launcher_icon.src = "storage/system/icns/nightly.png";
     else program_launcher_icon.src = "storage/system/icns/icon.png";
@@ -87,6 +88,7 @@ export function reload() {
     
 
     // clock.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.clock`);
+    clock.title = get_translation(CURRENT_LANGUAGE, `structure.taskbar.clock`);
     clock.style = `right: 0;
                     width: calc(${taskbar_height}px * 3);
                     font-size: calc(${taskbar_height}px / 2);
