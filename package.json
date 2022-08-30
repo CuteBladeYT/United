@@ -19,6 +19,7 @@
     "express": "^4.18.1",
     "fs": "0.0.1-security",
     "http": "0.0.1-security",
+    "is-charging": "^2.0.0",
     "loudness": "^0.4.1",
     "network-speed": "^2.1.1",
     "socket.io": "^4.5.0",
